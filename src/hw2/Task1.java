@@ -21,34 +21,35 @@ public class Task1 {
                         6. Наименьшее (нужно считать два числа вызвать метод lesser)
                         7. Модуль (нужно считать одно число вызвать метод abs)
                         8. Выход""");
-                Calculator calc = new Calculator(intInput("Введите первое число: "));
+                Calculator calc = new Calculator();
                 switch (select){
                     case 1:{
-                        System.out.println(calc.sum(calc.a, intInput("Введите второе число: ")));
+
+                        System.out.println(calc.sum(intInput("Введите первое число: "), intInput("Введите второе число: ")));
                         break;
                     }
                     case 2:{
-                        System.out.println(calc.mult(calc.a, intInput("Введите второе число: ")));
+                        System.out.println(calc.mult(intInput("Введите первое число: "), intInput("Введите второе число: ")));
                         break;
                     }
                     case 3:{
-                        System.out.println(calc.devide(calc.a, intInput("Введите второе число: ")));
+                        System.out.println(calc.devide(intInput("Введите первое число: "), intInput("Введите второе число: ")));
                         break;
                     }
                     case 4:{
-                        System.out.println(calc.minus(calc.a, intInput("Введите второе число: ")));
+                        System.out.println(calc.minus(intInput("Введите первое число: "), intInput("Введите второе число: ")));
                         break;
                     }
                     case 5:{
-                        System.out.println(calc.greater(calc.a, intInput("Введите второе число: ")));
+                        System.out.println(calc.greater(intInput("Введите первое число: "), intInput("Введите второе число: ")));
                         break;
                     }
                     case 6:{
-                        System.out.println(calc.lesser(calc.a,intInput("Введите второе число: ")));
+                        System.out.println(calc.lesser(intInput("Введите первое число: "),intInput("Введите второе число: ")));
                         break;
                     }
                     case 7:{
-                        System.out.println(calc.abs(calc.a));
+                        System.out.println(calc.abs(intInput("Введите первое число: ")));
                         break;
                     }
                 }
@@ -56,7 +57,7 @@ public class Task1 {
     }
 }
 class Calculator{
-    int a,b,res;
+
     int sum(int a, int b){
         return a+b;
     }
@@ -93,7 +94,5 @@ class Calculator{
             return a;
         }
     }
-    public Calculator(int a){
-        this.a=a;
-    }
+
 }
