@@ -8,12 +8,13 @@ public class Task1 {
         Rectangle rectangle2=new Rectangle(8,9,"silver","metall");
         rectangle2.print();
 
+
     }
 }
 class Rectangle{
     int a,b;
-    String color="colorless";
-    String surface="air";
+    String color;
+    String surface;
     public Rectangle(int a,int b){
         this.a=a;
         this.b=b;

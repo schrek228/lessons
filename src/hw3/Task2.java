@@ -20,7 +20,7 @@ public class Task2 {
                     Character Steve = new Character("Steve", 10);
                     Character John = new Character("John",10);
                     while(Steve.HP>0&&John.HP>0){
-                        System.out.println(Steve.shot(Steve,John));
+                        System.out.println(Steve.shot(John));
                         if(Steve.HP==0){
                             System.out.println("Steve is dead, John win");
                             break;
@@ -29,7 +29,7 @@ public class Task2 {
                             System.out.println("John is dead, Steve win");
                             break;
                         }
-                        System.out.println(John.shot(John,Steve));
+                        System.out.println(John.shot(Steve));
                     }
                     break;
                 }
@@ -95,17 +95,19 @@ class Character{
         this(name);
         this.damage=damage;
     }
-    public int shot(Character s1,Character s2){
+    public int shot(Character s2){
         Random rnd = new Random();
 
-        System.out.println("Стреляет игрок "+s1.name);
+        System.out.println("Стреляет игрок "+name);
+
         if(rnd.nextInt(0,2)==1){
-            s2.HP-=s1.damage;
+            s2.HP-=damage;
             index++;
-            System.out.println("Урон: "+s1.damage+" здоровье игрока "+s2.name+": "+s2.HP+" попаданий:"+index);
+            System.out.println("Урон: "+damage+" здоровье игрока "+s2.name+": "+s2.HP+" попаданий:"+index);
         }
         else {
             System.out.println("промах" + " здоровье игрока " + s2.name + ": " + s2.HP+" попаданий:"+index);
+            index=0;
         }
         return s2.HP;
     }
