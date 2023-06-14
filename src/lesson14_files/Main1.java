@@ -30,9 +30,9 @@ public class Main1 {
             e.printStackTrace();
         }
     }
-    static void writeToFile(String filePath){
+    static void writeToFile(String file,String str){
         try {
-            PrintWriter pw = new PrintWriter(filePath);
+            PrintWriter pw = new PrintWriter(file);
             pw.println("hello world");
             pw.println(2345345);
             pw.println(2.5);

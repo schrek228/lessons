@@ -35,8 +35,9 @@ public class tsk4 {
         MyScanner scn = new MyScanner();
         String kino = scn.next("");
         //TODO: нужно сформировать не строк, а список объектов подписки
-        String collect2 = cinemaList.stream().filter(n -> n.name.equals(kino)).map(t -> t.name + " " + t.subList.stream().map(k -> k.name).collect(Collectors.joining("\n"))).collect(Collectors.joining("\n"));
-        System.out.println(collect2);
+
+        List<OnlineCinema> collect = cinemaList.stream().filter(n -> n.name.equals(kino)).collect(Collectors.toList());
+
         //6
         //TODO: нужно сформировать не строк, а список объектов подписки
         int pr = scn.nextInt();

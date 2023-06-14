@@ -31,7 +31,7 @@ public class tsk3 {
         Arrays.stream(banks).flatMap(bank -> bank.deps.stream()).forEach(dep-> System.out.println(dep));
 
 
-        //TODO: fuck it, idk how to do it, ive tried over99999 ways to fix it.
+
     }
 }
 class Bank{
